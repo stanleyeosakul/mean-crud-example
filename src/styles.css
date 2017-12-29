@@ -1,3 +1,4 @@
+/* Margin on Button */
 button {
     margin: 3px;
 }
@@ -11,8 +12,6 @@ button {
         -ms-animation: fadein 1s; /* Internet Explorer */
             -o-animation: fadein 1s; /* Opera < 12.1 */
             animation: fadein 1s;
-
-    margin-top: 20px;
 }
 
 /* ************************ */
