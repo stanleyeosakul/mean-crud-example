@@ -3,7 +3,7 @@ const path = require('path');
 const express = require('express');
 const router = express.Router();
 
-var angularBuildPath = path.resolve(__dirname, '../dist');
+var angularBuildPath = path.resolve(__dirname, '../../dist');
 router.use(express.static(angularBuildPath));
 
 router.get('*', function (req, res, next) {

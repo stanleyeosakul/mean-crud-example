@@ -1,0 +1,18 @@
+<div class="fadein">
+  <section class="hero is-link">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">{{ book?.title }}</h1>
+        <h2 class="subtitle">by {{ book?.author }}</h2>
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column">
+        <button class="button is-warning" routerLink="/books"><i class="fas fa-arrow-left"></i>Back</button>
+        <a *ngIf="book" style="margin: 3px" class="button is-success" [routerLink]="['/book-edit', book?._id]"><i class="far fa-edit"></i>Edit</a>
+        <a *ngIf="!book" style="margin: 3px" class="button is-success"><i class="far fa-edit"></i>Edit</a>
+        <button class="button is-danger" (click)="deleteBook(book?._id)"><i class="far fa-trash-alt"></i>Delete</button>
+      </div>
+    </div>
+  </section>
+</div>

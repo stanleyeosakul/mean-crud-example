@@ -7,20 +7,19 @@ const path = require('path');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const cors = require('cors');
 
 // Configuration
 const app = express();
 const port = process.env.PORT || 3000;
-const corsOptions = { origin: ['http://localhost:4200'] }
 
 // Routes
-const angular = require('./routes/angular');
-const api = require('./routes/api');
+const angular = require('./node_src/routes/angular');
+const api = require('./node_src/routes/api');
 
 // Connect to database via mongoose
-const config = require('./config/database');
-mongoose.connect(config.database)
+const config = require('./node_src/config/database');
+mongoose.Promise = require('bluebird');
+mongoose.connect(config.database, { useMongoClient: true, promiseLibrary: require('bluebird') })
     .then(() => console.log(`Connected to database ${config.database}`))
     .catch((err) => console.log(`Database error: ${err}`));
 
@@ -36,10 +35,6 @@ app.use(logger('dev'));
 
 // Body-Parser
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-
-// Cross-Origin Resource Sharing (CORS)
-app.use(cors(corsOptions));
 
 // ******************************************
 // ROUTES
@@ -47,7 +42,7 @@ app.use(cors(corsOptions));
 // Route for Angular
 app.use('/', angular);
 
-// Route APIs
+// Route for APIs go here
 app.use('/api', api);
 
 // ******************************************
@@ -65,7 +60,6 @@ app.use(function (req, res, next) {
 
 // Error handler for all other errors
 app.use(function (err, req, res, next) {
-    // set locals, only providing error in development
     res.locals.message = err.message;
     res.locals.error = req.app.get('env') === 'development' ? err : {};
     res.status(err.status || 500).json({

@@ -1,22 +1,14 @@
-<p align="center">
-    <img width="400" height="185" src="./src/assets/pics/mean.png">
-</p>
-
-# MEAN Simple Starter
-This MEAN Starter kit is a template for Angular 5 MEAN projects.  MEAN is a full-stack development toolkit using the Javascript-based technologies MongoDB, Express, Angular, and Node.js.  It uses JavaScript for client-side and server-side web application development.
-
-<p align="center">
-    <img width="768" height="310" src="./src/assets/pics/mean_cycle.jpg">
-</p>
+# MEAN CRUD Example
+This program is an example of a CRUD application using the MEAN stack.  This project was modified from the original code provided in this article: [MEAN Stack (Angular 5) CRUD Web Application Example](https://www.djamware.com/post/5a0673c880aca7739224ee21/mean-stack-angular-5-crud-web-application-example) by *Didin J.*
 
 ## Versions
-* MongoDB v3.6.0
+* MongoDB v3.6.0 (Mongoose v4.13.8)
 * Express v4.16.2
 * Angular v5.1.2
 * Node.js v9.3.0
 
 ## Installation
-1. Clone this repo: `git clone https://github.com/Stanza987/mean-simple-starter.git`
+1. Clone this repo
 1. `cd` into the folder of the cloned repo
 1. Run `yarn install` to install dependencies
 1. Start your local MongoDB instance
@@ -25,14 +17,17 @@ This MEAN Starter kit is a template for Angular 5 MEAN projects.  MEAN is a full
         * Front End (Angular)
             * Run `ng serve`, and navigate to `http://localhost:4200/`. 
         * Back End (MongoDB, Express, Node.js)
-            * Run `ng build --prod` to generate the `dist/` folder in your root directory.
-            * Run `node server.js`, and navigate to `http://localhost:3000/`.
+            * Run `yarn run dev`, and navigate to `http://localhost:3000/`.
     * Production
-        * Run `yarn start`. Navigate to `http://localhost:3000/`.
+        * Run `yarn start`, and navigate to `http://localhost:3000/`.
 
 ## Built-in scripts
+* `yarn run dev`
+    * Builds the Angular project without build optimization into the `dist/` folder
+    * Runs the `server.js` node app
 * `yarn start`
-    * Runs `ng build --prod` followed by `node server.js`
+    * Builds the Angular project into the `dist/` folder
+    * Runs the `server.js` node app
 
 ## Installed Packages
 ### Front-end
@@ -44,7 +39,6 @@ This MEAN Starter kit is a template for Angular 5 MEAN projects.  MEAN is a full
 * Express
 * Mongoose
 * Body-Parser
-* Cors
 
 ### Development
 * Angular CLI v1.6.3

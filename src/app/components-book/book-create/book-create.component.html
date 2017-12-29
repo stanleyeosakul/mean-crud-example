@@ -1,0 +1,27 @@
+<div class="fadein">
+  <h1 class="title">Add New Book</h1>
+  <div class="columns">
+    <div class="column">
+      <form #bookForm="ngForm" (ngSubmit)="saveBook()">
+        <div class="field">
+          <div class="control">
+            <label for="title">Title</label>
+            <input required name="title" id="title" [(ngModel)]="book.title" type="text" class="input">
+          </div>
+        </div>
+        <div class="field">
+          <div class="control">
+            <label for="author">Author</label>
+            <input required name="author" id="author" [(ngModel)]="book.author" type="text" class="input">
+          </div>
+        </div>
+        <div class="field">
+          <div class="control">
+            <button class="button is-warning" routerLink="/books"><i class="fas fa-arrow-left"></i>Back</button>
+            <button class="button is-link" type="submit" [disabled]="!bookForm.valid">Create</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

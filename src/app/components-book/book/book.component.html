@@ -1,0 +1,19 @@
+<div class="fadein">
+  <h1 class="title">Book List
+    <a [routerLink]="['/book-create']" class="button is-link is-outlined"><i class="fas fa-plus"></i>Add</a>
+  </h1>
+  <table class="table is-striped is-hoverable is-fullwidth">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of books">
+        <td><a class="button is-text" [routerLink]="['/book-details', book._id]">{{ book.title }}</a></td>
+        <td>{{ book.author }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,28 @@
+<div class="fadein">
+  <h1 class="title">Update Book</h1>
+  <div class="columns">
+    <div class="column">
+      <form #bookForm="ngForm" (ngSubmit)="updateBook(book._id)">
+        <div class="field">
+          <div class="control">
+            <label for="title">Title</label>
+            <input *ngIf="book" required name="title" id="title" [(ngModel)]="book.title" type="text" class="input">
+            <input *ngIf="!book" required name="title" id="title" type="text" class="input">
+          </div>
+        </div>
+        <div class="field">
+          <div class="control">
+            <label for="author">Author</label>
+            <input *ngIf="book" required name="author" id="author" [(ngModel)]="book.author" type="text" class="input">
+            <input *ngIf="!book" required name="author" id="author" type="text" class="input">
+          </div>
+        </div>
+        <div class="field">
+          <div class="control">
+            <input type="submit" class="button is-link" value="Update" [disabled]="!bookForm.valid">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
