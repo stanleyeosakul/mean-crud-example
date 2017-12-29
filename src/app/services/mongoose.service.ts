@@ -19,7 +19,7 @@ export class MongooseService {
 
   // GET A BOOK
   getBook(id: string): Observable<Book> {
-    return this.http.get<Book>(`/api/book/${id}`);
+    return this.http.get<Book>(`api/book/${id}`);
   }
 
   // SAVE A BOOK
@@ -29,12 +29,12 @@ export class MongooseService {
 
   // UPDATE A BOOK
   updateBook(id: string, book: Book): Observable<void> {
-    return this.http.put<void>(`/api/book/${id}`, book);
+    return this.http.put<void>(`api/book/${id}`, book);
   }
 
   // DELETE A BOOK
   deleteBook(id: string): Observable<void> {
-    return this.http.delete<void>(`/api/book/${id}`);
+    return this.http.delete<void>(`api/book/${id}`);
   }
 
 }
