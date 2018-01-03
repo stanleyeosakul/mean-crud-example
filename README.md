@@ -1,6 +1,11 @@
 # MEAN CRUD Example
 This program is an example of a CRUD application using the MEAN stack.  This project was modified from the original code provided in this article: [MEAN Stack (Angular 5) CRUD Web Application Example](https://www.djamware.com/post/5a0673c880aca7739224ee21/mean-stack-angular-5-crud-web-application-example) by *Didin J.*  The GitHub repo for his project can be found [here](https://github.com/didinj/mean-stack-angular5-crud).
 
+<p align="center">
+    <img width="500" height="308" src="./src/assets/pics/homepage.png"><br>
+    <a href="https://fast-crag-63853.herokuapp.com/" target="_blank">MEAN Stack CRUD Example</a>
+</p>
+
 ## Versions
 * MongoDB v3.6.0 (Mongoose v4.13.8)
 * Express v4.16.2
