@@ -1,5 +1,5 @@
 # MEAN CRUD Example
-### Last Update: 2/1/2018
+### Last Update: 2/2/2018
 This program is an example of a CRUD application using the MEAN stack.  This project was modified from the original code provided in this article: [MEAN Stack (Angular 5) CRUD Web Application Example](https://www.djamware.com/post/5a0673c880aca7739224ee21/mean-stack-angular-5-crud-web-application-example) by *Didin J.*  The GitHub repo for his project can be found [here](https://github.com/didinj/mean-stack-angular5-crud).
 
 <p align="center">
@@ -47,16 +47,16 @@ This program is an example of a CRUD application using the MEAN stack.  This pro
 
 ## Installed Packages
 ### Front-end
-* [Angular v5.2.3](https://angular.io/)
+* [Angular 5](https://angular.io/)
 * [Bulma CSS Framework v0.62](https://bulma.io/)
 * [Font-Awesome v5.0.6](https://fontawesome.com/)
 
 ### Back-end
-* Express
-* Mongoose
-* Body-Parser
+* [Express](https://expressjs.com/)
+* [Mongoose](http://mongoosejs.com/)
+* [Body-Parser](https://github.com/expressjs/body-parser)
 
 ### Development
 * [Angular CLI v1.6.7](https://github.com/angular/angular-cli)
-* Morgan Logging library
-* Typescript
+* [Morgan Logging library](https://github.com/expressjs/morgan)
+* [Typescript](https://www.typescriptlang.org/)
