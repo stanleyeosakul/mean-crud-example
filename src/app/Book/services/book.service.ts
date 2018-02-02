@@ -1,14 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { HttpClient } from '@angular/common/http';
-
-export interface Book {
-  title: string;
-  author: string;
-}
+import { Book } from '../models/Book';
 
 @Injectable()
-export class MongooseService {
+export class BookService {
 
   constructor(private http: HttpClient) { }
 

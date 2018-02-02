@@ -1,20 +1,21 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { MongooseService, Book } from '../../services/mongoose.service';
+import { BookService } from '../../services/book.service';
+import { Book } from '../../models/Book';
 
 @Component({
   selector: 'app-book-create',
   templateUrl: './book-create.component.html',
-  styleUrls: ['./book-create.component.css']
+  styles: []
 })
 export class BookCreateComponent {
 
   book: any = {};
 
-  constructor(private router: Router, private mongoose: MongooseService) { }
+  constructor(private router: Router, private bookService: BookService) { }
 
   saveBook() {
-    this.mongoose.insertBook(this.book)
+    this.bookService.insertBook(this.book)
       .subscribe((res: Book) => { this.router.navigate(['/books']); }, (err) => console.log(err));
   }
 }

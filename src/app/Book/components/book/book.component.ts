@@ -1,19 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { MongooseService, Book } from '../../services/mongoose.service';
+import { BookService } from '../../services/book.service';
+import { Book } from '../../models/Book';
 
 @Component({
   selector: 'app-book',
   templateUrl: './book.component.html',
-  styleUrls: ['./book.component.css']
+  styles: []
 })
 export class BookComponent implements OnInit {
 
   books: any;
 
-  constructor(private mongoose: MongooseService) { }
+  constructor(private bookService: BookService) { }
 
   ngOnInit() {
-    this.mongoose.getAllBooks()
+    this.bookService.getAllBooks()
       .subscribe((data: Book[]) => this.books = data);
   }
 
