@@ -8,7 +8,7 @@ router.use(express.static(angularBuildPath));
 
 router.get('*', function (req, res, next) {
     if (req.url.startsWith('/api')) return next();
-    res.sendFile(`${angularBuildPath}/index.html`)
+    res.sendFile(`${angularBuildPath}/index.html`);
 });
 
 module.exports = router;
